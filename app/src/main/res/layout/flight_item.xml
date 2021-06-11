@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginVertical="16dp"
+    android:layout_marginHorizontal="16dp">
+
+    <TextView
+        android:id="@+id/tv_airline_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Havayolu:"
+        android:textColor="@color/airline_blue_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="16dp" />
+
+
+    <TextView
+        android:id="@+id/tv_departure_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kalkış: "
+        android:textColor="@color/airline_blue_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_airline_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_airline_label"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tv_arrival_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Varış"
+        android:textColor="@color/airline_blue_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_departure_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_departure_label"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tv_airline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Turkish Airlines"
+        android:textColor="@color/airline_blue_dark"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/tv_airline_label"
+        app:layout_constraintTop_toTopOf="@id/tv_airline_label"
+        app:layout_constraintBottom_toBottomOf="@id/tv_airline_label"
+        android:layout_marginStart="6dp"/>
+
+    <TextView
+        android:id="@+id/tv_departure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="SAW - 09:45"
+        android:textColor="@color/airline_blue_dark"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tv_airline"
+        app:layout_constraintTop_toTopOf="@id/tv_departure_label"
+        app:layout_constraintBottom_toBottomOf="@id/tv_departure_label" />
+
+    <TextView
+        android:id="@+id/tv_arrival"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="ESB - 11:45"
+        android:textColor="@color/airline_blue_dark"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tv_airline"
+        app:layout_constraintTop_toTopOf="@id/tv_arrival_label"
+        app:layout_constraintBottom_toBottomOf="@id/tv_arrival_label" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_status"
+        app:layout_constraintBottom_toBottomOf="@id/iv_status"
+        android:background="#F1F2FB" />
+
+    <ImageView
+        android:id="@+id/iv_status"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/status_circle_yellow"
+        app:layout_constraintStart_toStartOf="@id/tv_airline_label"
+        app:layout_constraintTop_toBottomOf="@id/tv_arrival_label"
+        android:layout_marginTop="30dp"/>
+
+    <ImageView
+        android:id="@+id/ic_delay"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_delay"
+        android:layout_marginStart="14dp"
+        app:layout_constraintStart_toEndOf="@id/iv_status"
+        app:layout_constraintTop_toTopOf="@id/iv_status"
+        app:layout_constraintBottom_toBottomOf="@id/iv_status"/>
+
+    <TextView
+        android:id="@+id/tv_delay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13 mi"
+        android:layout_marginStart="6dp"
+        app:layout_constraintStart_toEndOf="@id/ic_delay"
+        app:layout_constraintTop_toTopOf="@id/ic_delay"
+        app:layout_constraintBottom_toBottomOf="@id/ic_delay"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/iv_status"
+        app:layout_constraintBottom_toBottomOf="@id/iv_status"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_path" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

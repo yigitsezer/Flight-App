@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Flight App</string>
+    <string name="password_label">Password</string>
+    <string name="email_label">Email</string>
+    <string name="remember_label">Beni Hatırla</string>
+    <string name="login_label">Giriş Yap</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

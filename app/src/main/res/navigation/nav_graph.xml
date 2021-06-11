@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.yigitsezer.flightapp.ui.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            app:popUpToInclusive="true"
+            app:popUpTo="@+id/loginFragment"
+            app:launchSingleTop="true"
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            app:popUpToInclusive="true"
+            app:popUpTo="@+id/flightsFragment"
+            android:id="@+id/action_splashFragment_to_flightsFragment"
+            app:destination="@id/flightsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.yigitsezer.flightapp.ui.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_flightsFragment"
+            app:launchSingleTop="true"
+            app:destination="@id/flightsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flightsFragment"
+        android:name="com.yigitsezer.flightapp.ui.FlightsFragment"
+        android:label="FlightsFragment"
+        tools:layout="@layout/fragment_flights">
+        <action
+            android:id="@+id/action_flightsFragment_to_flightDetailFragment"
+            app:destination="@id/flightDetailFragment" />
+        <action
+            android:id="@+id/action_flightsFragment_to_loginFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@+id/loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flightDetailFragment"
+        android:name="com.yigitsezer.flightapp.ui.FlightDetailFragment"
+        android:label="FlightDetailFragment"
+        tools:layout="@layout/fragment_flight_detail">
+        <argument
+            app:nullable="true"
+            android:name="flightInformation"
+            app:argType="com.yigitsezer.flightapp.repository.model.FlightData"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>
